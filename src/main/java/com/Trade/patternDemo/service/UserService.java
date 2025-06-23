@@ -59,6 +59,7 @@ public class UserService {
         response.put("message", "Invalid email or password");
         return response;
     }
+    
     public double getMyFunds(int userId){
         Optional<User> optionalUser = userRepo.findById(userId);
         if (optionalUser.isPresent()) {
